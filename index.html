@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wysper - Micro-Influencer Matchmaking</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Pattaya&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700;800&display=swap');
 
     :root {
       --navy: #1a1035;
@@ -37,12 +37,10 @@
       justify-content: space-between;
     }
     .logo {
-      font-family: 'Pacifico', cursive;
+      font-family: 'Pattaya', sans-serif;
       font-size: 1.8rem;
       color: var(--white);
-      letter-spacing: 0;
     }
-    .logo span { color: #c4b5fd; }
     nav a.nav-cta {
       background: var(--purple);
       color: var(--white);
@@ -51,7 +49,6 @@
       text-decoration: none;
       font-weight: 600;
       font-size: 0.9rem;
-      transition: background 0.2s;
     }
     nav a.nav-cta:hover { background: #6d28d9; }
 
@@ -63,7 +60,7 @@
       padding: 5rem 2rem 4rem;
     }
     .hero-wordmark {
-      font-family: 'Pacifico', cursive;
+      font-family: 'Pattaya', sans-serif;
       font-size: clamp(3rem, 7vw, 5rem);
       color: #c4b5fd;
       margin-bottom: 1.25rem;
@@ -72,13 +69,9 @@
     .hero h1 {
       font-size: clamp(1.7rem, 3.5vw, 2.6rem);
       font-weight: 800;
-      line-height: 1.2;
+      line-height: 1.35;
       max-width: 720px;
       margin: 0 auto 1rem;
-      white-space: nowrap;
-    }
-    @media (max-width: 700px) {
-      .hero h1 { white-space: normal; font-size: 1.5rem; }
     }
     .hero p.sub {
       font-size: 1.1rem;
@@ -139,19 +132,17 @@
       margin-bottom: 1.25rem;
     }
     .insight p:last-child { margin-bottom: 0; }
-    .insight p strong {
-      color: #c4b5fd;
-      font-weight: 700;
-    }
+    .insight p strong { color: #c4b5fd; font-weight: 700; }
 
     /* WHO WE WORK WITH */
     .who { background: var(--light); }
     .who-grid {
       display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
+      flex-wrap: nowrap;
+      gap: 0.75rem;
       justify-content: center;
       margin-bottom: 1.5rem;
+      overflow-x: auto;
     }
     .who-tag {
       background: var(--purple-light);
@@ -160,6 +151,7 @@
       padding: 0.55rem 1.25rem;
       border-radius: 100px;
       font-size: 1rem;
+      white-space: nowrap;
     }
     .who-desc {
       text-align: center;
@@ -176,10 +168,7 @@
       gap: 2rem;
       margin-top: 2.5rem;
     }
-    .step {
-      text-align: center;
-      padding: 1.5rem;
-    }
+    .step { text-align: center; padding: 1.5rem; }
     .step-num {
       width: 64px;
       height: 64px;
@@ -193,12 +182,7 @@
       font-size: 1.5rem;
       margin: 0 auto 1.1rem;
     }
-    .step h3 {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 0.5rem;
-    }
+    .step h3 { font-size: 1.15rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; }
     .step p { color: var(--muted); font-size: 1rem; }
 
     /* PRICING */
@@ -243,11 +227,7 @@
       color: var(--navy);
       line-height: 1;
     }
-    .card-influencers span {
-      font-size: 1rem;
-      font-weight: 500;
-      color: var(--muted);
-    }
+    .card-influencers span { font-size: 1rem; font-weight: 500; color: var(--muted); }
     .card-price {
       font-size: 1.75rem;
       font-weight: 800;
@@ -258,6 +238,7 @@
       font-size: 0.85rem;
       color: var(--muted);
       margin-bottom: 1.25rem;
+      min-height: 1.2em;
     }
     .card a.btn-buy {
       display: block;
@@ -286,12 +267,19 @@
     }
     footer a { color: var(--purple-light); text-decoration: none; }
     footer a:hover { text-decoration: underline; }
-    footer strong { color: white; }
+    .footer-brand {
+      font-family: 'Pattaya', sans-serif;
+      font-size: 1.4rem;
+      color: white;
+      margin-bottom: 1rem;
+      display: block;
+    }
 
     @media (max-width: 600px) {
       section { padding: 3rem 1.25rem; }
       nav { padding: 0.875rem 1.25rem; }
       .hero h1 { font-size: 1.4rem; }
+      .who-grid { flex-wrap: wrap; }
     }
   </style>
 </head>
@@ -306,7 +294,7 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-wordmark">Wysper</div>
-  <h1>The Right Micro-Influencers for your Brand. On&nbsp;Demand.</h1>
+  <h1>The Right Micro-Influencers<br>For Your Brand. On Demand.</h1>
   <p class="sub">Stop searching. Stop guessing. We match you with creators who fit your brand and actually convert.</p>
   <p class="price-hook">Curated influencer lists from less than $1 per influencer.</p>
   <a class="btn-primary" href="#pricing">See Pricing</a>
@@ -318,7 +306,7 @@
     <p>Here's what most brands don't realize: <strong>the overwhelming majority of micro-influencers will promote your product in exchange for a free sample.</strong></p>
     <p>No cash. No contracts. Just your product and the right creator.</p>
     <p>The result? <strong>3-10x higher engagement</strong>, greater audience trust, virtually zero cost.</p>
-    <p>The hard part was never paying influencers. It's finding the right ones. <strong>That's what we do.</strong></p>
+    <p>The hard part is finding the right influencers. <strong>That's what we do.</strong></p>
   </div>
 </section>
 
@@ -404,7 +392,7 @@
     <div class="pricing-tier">
       <div class="tier-header">
         <h3>Wysper Connect</h3>
-        <p>We find them. We reach out. We offer product not payment.</p>
+        <p>We find them AND reach out. We offer your product not payment.</p>
       </div>
       <div class="cards">
         <div class="card">
@@ -442,21 +430,21 @@
           <div class="card-label">Basic</div>
           <div class="card-influencers">10 <span>influencers</span></div>
           <div class="card-price">$250</div>
-          <div class="card-per">Hand-picked, verified active</div>
+          <div class="card-per"></div>
           <a class="btn-buy" href="https://buy.stripe.com/8x23co1pS86K42n9EK7wA09" target="_blank">Buy Now</a>
         </div>
         <div class="card popular">
           <div class="card-label">Popular</div>
           <div class="card-influencers">20 <span>influencers</span></div>
           <div class="card-price">$445</div>
-          <div class="card-per">4%+ engagement guaranteed</div>
+          <div class="card-per"></div>
           <a class="btn-buy" href="https://buy.stripe.com/14A14g3y00EigP918e7wA0a" target="_blank">Buy Now</a>
         </div>
         <div class="card">
           <div class="card-label">Best Value</div>
           <div class="card-influencers">30 <span>influencers</span></div>
           <div class="card-price">$595</div>
-          <div class="card-per">Full follow-up sequence included</div>
+          <div class="card-per"></div>
           <a class="btn-buy" href="https://buy.stripe.com/5kQ4gsd8A0EigP9bMS7wA0b" target="_blank">Buy Now</a>
         </div>
       </div>
@@ -467,7 +455,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <strong>Wysper</strong><br /><br />
+  <span class="footer-brand">Wysper Talent</span>
   Questions? Email us at <a href="mailto:team@wyspertalent.com">team@wyspertalent.com</a><br /><br />
   &copy; Wysper. All rights reserved.
 </footer>
