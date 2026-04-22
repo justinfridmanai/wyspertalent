@@ -153,12 +153,8 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 0.75rem;
-      max-width: 520px;
+      max-width: 380px;
       margin: 0 auto 1.5rem;
-    }
-    .who-row {
-      display: flex;
-      justify-content: center;
     }
     .who-tag {
       background: var(--purple-light);
@@ -295,7 +291,7 @@
       section { padding: 3rem 1.25rem; }
       nav { padding: 0.875rem 1.25rem; }
       .hero h1 { font-size: 1.4rem; }
-      .who-grid { flex-wrap: wrap; }
+      .who-grid { max-width: 300px; }
     }
   </style>
 </head>
@@ -331,16 +327,12 @@
   <div class="container">
     <h2 class="section-title">Who We Work With</h2>
     <div class="who-grid">
-      <div class="who-row">
-        <span class="who-tag">DTC Brands</span>
-        <span class="who-tag">Shopify Stores</span>
-        <span class="who-tag">Etsy Sellers</span>
-      </div>
-      <div class="who-row">
-        <span class="who-tag">Small Businesses</span>
-        <span class="who-tag">Product Launchers</span>
-        <span class="who-tag">eCommerce Brands</span>
-      </div>
+      <span class="who-tag">DTC Brands</span>
+      <span class="who-tag">Shopify Stores</span>
+      <span class="who-tag">Etsy Sellers</span>
+      <span class="who-tag">Small Businesses</span>
+      <span class="who-tag">Product Launchers</span>
+      <span class="who-tag">eCommerce Brands</span>
     </div>
     <p class="who-desc">Growth through influencer marketing - without the agency price tag.</p>
   </div>
