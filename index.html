@@ -150,17 +150,15 @@
     /* WHO WE WORK WITH */
     .who { background: var(--light); }
     .who-grid {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 0.75rem;
-      align-items: center;
-      margin-bottom: 1.5rem;
+      max-width: 520px;
+      margin: 0 auto 1.5rem;
     }
     .who-row {
       display: flex;
-      gap: 0.75rem;
       justify-content: center;
-      flex-wrap: wrap;
     }
     .who-tag {
       background: var(--purple-light);
@@ -310,12 +308,12 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-wordmark">Wysper</div>
-  <p style="font-size: 1.1rem; color: #c4b5fd; font-style: italic; font-weight: 400; margin-bottom: 2rem; margin-top: -0.5rem; letter-spacing: 0.01em;">When you Wysper, people listen.</p>
+  <div class="hero-wordmark" style="font-size: clamp(4rem, 9vw, 6.5rem);">Wysper</div>
+  <p style="font-size: 1.15rem; color: #c4b5fd; font-style: italic; font-weight: 400; margin-bottom: 2rem; margin-top: -0.25rem; letter-spacing: 0.01em;">When you <span style="font-family: 'Pattaya', sans-serif; color: #ffffff; font-style: normal; font-size: 1.25em;">Wysper</span>, people listen.</p>
   <h1>The Right Micro-Influencers<br>For Your Brand. On Demand.</h1>
   <p class="sub">Stop searching. Stop guessing. We match you with creators who fit your brand and actually convert.</p>
   <p class="price-hook">Curated influencer lists for as little as $1 per influencer.</p>
-  <a class="btn-primary" href="#pricing">Get My Influencer List</a>
+  <a class="btn-primary" href="#pricing">See Pricing</a>
 </section>
 
 <!-- INSIGHT -->
@@ -482,10 +480,10 @@
 
 <!-- CTA HOOK -->
 <section style="background: linear-gradient(135deg, #1a1035 0%, #1e3a5f 100%); text-align: center; padding: 4.5rem 2rem;">
-  <p style="font-size: clamp(1.5rem, 3.5vw, 2.2rem); font-weight: 800; color: white; line-height: 1.4; max-width: 680px; margin: 0 auto 1.75rem;">
+  <p style="font-size: clamp(1.5rem, 3.5vw, 2.2rem); font-weight: 800; color: white; line-height: 1.4; max-width: 680px; margin: 0 auto 0.75rem;">
     Ready to be heard?
   </p>
-  <a href="#pricing" style="display: inline-block; background: #7c3aed; color: white; padding: 0.85rem 2.25rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.05rem;">Get My Influencer List</a>
+  <p style="font-size: 1.1rem; color: #c4b5fd; margin: 0 auto; max-width: 520px;">Get your product into the right hands today.</p>
 </section>
 
 <!-- FOOTER -->
